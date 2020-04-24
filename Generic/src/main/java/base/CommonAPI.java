@@ -420,4 +420,9 @@ public class CommonAPI {
         }
     }
 
+    public void printRana()
+    {
+        //test method
+    }
+
 }
