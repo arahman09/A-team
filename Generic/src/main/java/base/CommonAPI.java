@@ -26,12 +26,9 @@ public class CommonAPI {
 
     @Parameters({"url"})
     @BeforeMethod
-    public void setUp(@Optional("http://www.amazon.com") String url){
-<<<<<<< HEAD
+    public void setUp(@Optional("http://www.amazon.com") String url)
+    {
         System.setProperty("webdriver.gecko.driver", "/Users/mohidulislam/Develop/A-team/Generic/browser-driver/geckodriver");
-=======
-        System.setProperty("webdriver.gecko.driver", "/Users/juwel/develop/A-team/Generic/browser-driver/geckodriver");
->>>>>>> 270b4d06ca3949791f15f8a723cacc51c8b9dcab
         driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.navigate().to(url);
@@ -420,9 +417,5 @@ public class CommonAPI {
         }
     }
 
-    public void printRana()
-    {
-        //test method
-    }
 
 }
