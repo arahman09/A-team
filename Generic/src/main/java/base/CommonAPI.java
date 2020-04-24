@@ -27,7 +27,7 @@ public class CommonAPI {
     @Parameters({"url"})
     @BeforeMethod
     public void setUp(@Optional("http://www.amazon.com") String url){
-        System.setProperty("webdriver.gecko.driver", "/Volumes/D/Develop/WebAutomation_FrameWork/TeamA_WebAutomation/Generic/browser-driver/geckodriver");
+        System.setProperty("webdriver.gecko.driver", "/Users/juwel/develop/A-team/Generic/browser-driver/geckodriver");
         driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.navigate().to(url);
