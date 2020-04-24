@@ -12,6 +12,9 @@
         <module>Generic</module>
         <module>Alibaba</module>
         <module>Bestbuy</module>
+        <module>TargetStore</module>
+        <module>Staples</module>
+        <module>Staples</module>
     </modules>
 
     <dependencyManagement>
