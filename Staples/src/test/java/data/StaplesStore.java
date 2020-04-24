@@ -113,4 +113,9 @@ public class StaplesStore extends CommonAPI
     {
 
     }
+
+    public void rana()
+    {
+
+    }
 }
