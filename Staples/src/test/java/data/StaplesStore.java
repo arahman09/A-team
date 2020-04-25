@@ -2,6 +2,7 @@ package data;
 import base.CommonAPI;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -57,6 +58,7 @@ public class StaplesStore extends CommonAPI
     public void applyPromoCode()
     {
 
+
     }
 
     @Test //test #7
@@ -66,15 +68,15 @@ public class StaplesStore extends CommonAPI
     }
 
     @Test //test #8
-    public void signIn()
-    {
+    public void signIn() {
+        //WebElement element = driver.findElement(By.cssSelector("#Sign\\ In > div:nth-child(1) > div"));
 
     }
 
     @Test //test #9
-    public void createNewAccount()
-    {
-
+    public void createNewAccount() {
+        driver.findElement(By.cssSelector(".Dropdown__sectionMenu ")).click();
+        driver.findElement(By.cssSelector(""));
     }
 
     @Test //test #10
