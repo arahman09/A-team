@@ -10,8 +10,8 @@ import java.util.List;
 
 public class StaplesStore extends CommonAPI
 {
-    @Test //test #1
-    public void testTitle()
+    @Test  //Test #1
+    public void testTitle() throws InterruptedException
     {
         String expectedTitle = driver.getTitle();
         SoftAssert softAssert = new SoftAssert();
@@ -22,9 +22,11 @@ public class StaplesStore extends CommonAPI
 
         System.out.println(actuaTitle);
         System.out.println(expectedTitle);
+
+        sleepFor(5);
     }
 
-    @Test //test #2
+    @Test  //Test #2
     public void testTypingOnSearchBox() throws InterruptedException
     {
         List<String> list = TestData.getListOfItems();
@@ -32,6 +34,7 @@ public class StaplesStore extends CommonAPI
         for(int i = 0; i < list.size(); i++)
         {
             driver.findElement(By.id("searchInput")).sendKeys(list.get(i), Keys.ENTER);
+<<<<<<< HEAD
             Thread.sleep(2000);
         }
     }
@@ -95,24 +98,42 @@ public class StaplesStore extends CommonAPI
     @Test //test #12
     public void readData()
     {
+=======
+            sleepFor(5);
+            driver.findElement(By.id("searchInput")).clear();
+>>>>>>> 788b0d6380d65713cfe234e5aa44429c03aedf04
+
+        }
+    }
+
+    @Test //Test #3
+    public void clickOnItemFromSearchResult() throws InterruptedException
+    {
+        driver.findElement(By.id("searchInput")).sendKeys("fountain pens", Keys.ENTER);
+        sleepFor(1);
+        driver.findElement(By.id("searchInput")).clear();
+        driver.findElement(By.id("searchInput")).sendKeys("fountain pens", Keys.ENTER);
+        driver.findElement(By.xpath("/html/body/div[1]/div/div[2]/div/div/div[2]/div[2]/div/div[1]/div/div/div[3]/div/div/div[1]/div[2]/a")).click();
+        sleepFor(3);
+    }
+
+    @Test  //Test #4
+    public void addToShoppingCart() throws InterruptedException
+    {
+        clickOnItemFromSearchResult();
+        sleepFor(2);
+        driver.findElement(By.id("ctaButton")).click();
+        sleepFor(2);
+        driver.findElement(By.className("uiStyles__mmx_icon_close")).click();
+        sleepFor(3);
 
     }
 
-    @Test //test #13
-    public void selectYourLocalStore()
+    @Test  //Test #5
+    public void checkTheItemsInShoppingCart() throws InterruptedException
     {
-
-    }
-
-    @Test //test #14
-    public void clickOnTermsAndConditions()
-    {
-
-    }
-
-    @Test //test #15
-    public void clickOnCleaningSupplies()
-    {
-
+        addToShoppingCart();
+        driver.findElement(By.className("uiStyles__mmx_icon_cart")).click();
+        sleepFor(4);
     }
 }
