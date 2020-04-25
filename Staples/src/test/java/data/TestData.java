@@ -4,11 +4,11 @@ import java.util.List;
 
 public class TestData
 {
-    public static String item1 = "imac";
-    public static String item2 = "macbook pro";
-    public static String item3 = "microsoft surface";
-    public static String item4 = "smart tv";
-    public static String item5 = "chromebook";
+    public static String item1 = "fountain pens";
+    public static String item2 = "notebooks";
+    public static String item3 = "bottled water";
+    public static String item4 = "trash bags ";
+    public static String item5 = "disinfectant wipes";
 
     public static List<String>  getListOfItems()
     {
