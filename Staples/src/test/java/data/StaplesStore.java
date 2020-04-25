@@ -34,27 +34,39 @@ public class StaplesStore extends CommonAPI
         for(int i = 0; i < list.size(); i++)
         {
             driver.findElement(By.id("searchInput")).sendKeys(list.get(i), Keys.ENTER);
-<<<<<<< HEAD
             Thread.sleep(2000);
         }
     }
 
-    @Test //test #3
-    public void clickOnItemFromSearchResult()
+    @Test //Test #3
+    public void clickOnItemFromSearchResult() throws InterruptedException
     {
+        driver.findElement(By.id("searchInput")).sendKeys("fountain pens", Keys.ENTER);
+        sleepFor(1);
+        driver.findElement(By.id("searchInput")).clear();
+        driver.findElement(By.id("searchInput")).sendKeys("fountain pens", Keys.ENTER);
+        driver.findElement(By.xpath("/html/body/div[1]/div/div[2]/div/div/div[2]/div[2]/div/div[1]/div/div/div[3]/div/div/div[1]/div[2]/a")).click();
+        sleepFor(3);
+    }
+
+    @Test  //Test #4
+    public void addToShoppingCart() throws InterruptedException
+    {
+        clickOnItemFromSearchResult();
+        sleepFor(2);
+        driver.findElement(By.id("ctaButton")).click();
+        sleepFor(2);
+        driver.findElement(By.className("uiStyles__mmx_icon_close")).click();
+        sleepFor(3);
 
     }
 
-    @Test //test #4
-    public void addToShoppingCart()
+    @Test  //Test #5
+    public void checkTheItemsInShoppingCart() throws InterruptedException
     {
-
-    }
-
-    @Test //test #5
-    public void checkTheItemsInShoppingCart()
-    {
-
+        addToShoppingCart();
+        driver.findElement(By.className("uiStyles__mmx_icon_cart")).click();
+        sleepFor(4);
     }
 
     @Test //test #6
@@ -98,42 +110,11 @@ public class StaplesStore extends CommonAPI
     @Test //test #12
     public void readData()
     {
-=======
-            sleepFor(5);
+
+         //  sleepFor(5);
             driver.findElement(By.id("searchInput")).clear();
->>>>>>> 788b0d6380d65713cfe234e5aa44429c03aedf04
 
         }
-    }
 
-    @Test //Test #3
-    public void clickOnItemFromSearchResult() throws InterruptedException
-    {
-        driver.findElement(By.id("searchInput")).sendKeys("fountain pens", Keys.ENTER);
-        sleepFor(1);
-        driver.findElement(By.id("searchInput")).clear();
-        driver.findElement(By.id("searchInput")).sendKeys("fountain pens", Keys.ENTER);
-        driver.findElement(By.xpath("/html/body/div[1]/div/div[2]/div/div/div[2]/div[2]/div/div[1]/div/div/div[3]/div/div/div[1]/div[2]/a")).click();
-        sleepFor(3);
-    }
 
-    @Test  //Test #4
-    public void addToShoppingCart() throws InterruptedException
-    {
-        clickOnItemFromSearchResult();
-        sleepFor(2);
-        driver.findElement(By.id("ctaButton")).click();
-        sleepFor(2);
-        driver.findElement(By.className("uiStyles__mmx_icon_close")).click();
-        sleepFor(3);
-
-    }
-
-    @Test  //Test #5
-    public void checkTheItemsInShoppingCart() throws InterruptedException
-    {
-        addToShoppingCart();
-        driver.findElement(By.className("uiStyles__mmx_icon_cart")).click();
-        sleepFor(4);
-    }
 }
