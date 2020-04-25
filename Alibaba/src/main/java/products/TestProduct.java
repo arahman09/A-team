@@ -13,7 +13,7 @@ public class TestProduct {
         productsList.add("Air pod");
         productsList.add("Vacuum cleaner ");
         productsList.add("Table fan");
-        productsList.add("Phone charger");
+        productsList.add("iPhone 8 charger");
 
         return productsList;
 
