@@ -113,7 +113,7 @@ public class CommonAPI {
                 }
             }
         }
-    }
+    } //
 
     public static void typeOnElementNEnter(String locator, String value,WebDriver driver1) {
         try {
