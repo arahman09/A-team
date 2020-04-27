@@ -18,6 +18,7 @@ public class ProductTest extends CommonAPI {
             driver.findElement(By.cssSelector(".ui-searchbar-keyword")).clear();
             driver.findElement(By.cssSelector(".ui-searchbar-keyword")).sendKeys(list.get(i), Keys.ENTER);
             Thread.sleep(2000);
+            //test commit;
 
         }
     }
