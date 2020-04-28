@@ -13,6 +13,7 @@
         <module>Alibaba</module>
         <module>Bestbuy</module>
         <module>Staples</module>
+        <module>NyTimes</module>
     </modules>
 
     <dependencyManagement>
