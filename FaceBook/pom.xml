@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>Bestbuy</artifactId>
+    <artifactId>FaceBook</artifactId>
     <dependencies>
         <dependency>
             <groupId>WebAutomationCollaboration</groupId>
@@ -17,6 +17,7 @@
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
+
     <build>
         <plugins>
             <plugin>
@@ -33,12 +34,13 @@
                 <version>3.0.0-M3</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFiles>target/test-classes/NyTimesRunner.xml</suiteXmlFiles>
+                        <suiteXmlFiles>target/test-classes/FacebookRunner.xml</suiteXmlFiles>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
         </plugins>
     </build>
+
 
 
 </project>

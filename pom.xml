@@ -12,9 +12,10 @@
         <module>Generic</module>
         <module>Alibaba</module>
         <module>Bestbuy</module>
-        <module>TargetStore</module>
         <module>Staples</module>
-        <module>Staples</module>
+        <module>NyTimes</module>
+        <module>FaceBook</module>
+        <module>BedBathAndBeyond</module>
     </modules>
 
     <dependencyManagement>
@@ -51,6 +52,7 @@
                 </dependency>
             </dependencies>
         </dependencyManagement>
+
     <build>
         <plugins>
             <plugin>
