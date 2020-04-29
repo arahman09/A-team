@@ -28,9 +28,10 @@ public class CommonAPI {
     @BeforeMethod
     public void setUp(@Optional("http://www.amazon.com") String url)
     {
-        System.setProperty("webdriver.gecko.driver", "/Users/mohidulislam/Develop/A-team/Generic/browser-driver/geckodriver");
+        System.setProperty("webdriver.gecko.driver", "/Volumes/D/Develop/WebAutomation_FrameWork/TeamA_WebAutomation/Generic/browser-driver/geckodriver");
         driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
         driver.navigate().to(url);
         driver.manage().window().maximize();
     }
@@ -141,7 +142,7 @@ public class CommonAPI {
         driver.navigate().back();
     }
 
-    public static void captureScreenshot(WebDriver driver, String screenshotName) {
+    public static void captureScreenShot(WebDriver driver, String screenShotName) {
         DateFormat df = new SimpleDateFormat("(MM.dd.yyyy-HH:mma)");
         Date date = new Date();
         df.format(date);

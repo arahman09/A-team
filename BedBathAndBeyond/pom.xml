@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>Bestbuy</artifactId>
+    <artifactId>BedBathAndBeyond</artifactId>
     <dependencies>
         <dependency>
             <groupId>WebAutomationCollaboration</groupId>
@@ -33,7 +33,7 @@
                 <version>3.0.0-M3</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFiles>target/test-classes/NyTimesRunner.xml</suiteXmlFiles>
+                        <suiteXmlFiles>target/test-classes/BedBathRunner.xml</suiteXmlFiles>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
