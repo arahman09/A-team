@@ -3,6 +3,7 @@
 
 <suite name ="Staples Test Automation Script" parallel="false">
 
+    <!--<parameter name="url" value="https://www.staples.com"/>-->
     <parameter name="url" value="https://www.staples.com"/>
 
     <test name = "Staples Home">
