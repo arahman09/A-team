@@ -14,6 +14,8 @@
         <module>Bestbuy</module>
         <module>Staples</module>
         <module>NyTimes</module>
+        <module>FaceBook</module>
+        <module>BedBathAndBeyond</module>
     </modules>
 
     <dependencyManagement>

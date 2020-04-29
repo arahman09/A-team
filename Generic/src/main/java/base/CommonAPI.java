@@ -31,6 +31,7 @@ public class CommonAPI {
         System.setProperty("webdriver.gecko.driver", "/Volumes/D/Develop/WebAutomation_FrameWork/TeamA_WebAutomation/Generic/browser-driver/geckodriver");
         driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
         driver.navigate().to(url);
         driver.manage().window().maximize();
     }
