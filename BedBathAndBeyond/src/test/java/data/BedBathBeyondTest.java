@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 
 public class BedBathBeyondTest extends CommonAPI {
 
+
     @Test // test 4
     public void exploreIdeaBoards() throws InterruptedException{
         driver.findElement(By.cssSelector("a.HeaderNavigation-inline_37InfC")).click();
@@ -17,7 +18,6 @@ public class BedBathBeyondTest extends CommonAPI {
     }
 
     // test 5
-
     @Test // test 6
     public void selectAppToDownload() throws InterruptedException{
         driver.findElement(By.cssSelector(".downloadIos")).click();
