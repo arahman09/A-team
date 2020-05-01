@@ -65,7 +65,7 @@ public class BedBathBeyondTest extends CommonAPI {
     }*/
 
     @Test // test 12a Evan Arafat
-    // INCOMPLETE MUST FINISH LATER....gklsdjf
+    // INCOMPLETE MUST FINISH LATER
     public void testHelpCenterSearchBar() throws InterruptedException{
 
         Actions mouse = new Actions(driver);
