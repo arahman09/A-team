@@ -1,6 +1,7 @@
 package base;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -28,8 +29,8 @@ public class CommonAPI {
     @BeforeMethod
     public void setUp(@Optional("http://www.amazon.com") String url)
     {
-        System.setProperty("webdriver.gecko.driver", "/Volumes/D/Develop/WebAutomation_FrameWork/TeamA_WebAutomation/Generic/browser-driver/geckodriver");
-        driver = new FirefoxDriver();
+        System.setProperty("webdriver.chrome.driver", "/Users/evanarafatbd/Downloads/chromedriver");
+        driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
         driver.navigate().to(url);
